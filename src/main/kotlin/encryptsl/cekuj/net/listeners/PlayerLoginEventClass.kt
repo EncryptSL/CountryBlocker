@@ -16,7 +16,7 @@ class PlayerLoginEventClass(private val countryBlocker: CountryBlocker) : Listen
 
     @EventHandler(priority = EventPriority.HIGHEST)
     fun detectedCountry(event: PlayerLoginEvent) {
-        if (IPTool.getIP(event.player) == "127.0.0.1") return
+        if (event.player.address == null || IPTool.getIP(event.player) == "127.0.0.1") return
         val country = countryBlocker.database.getDatabase().country(InetAddress.getByName(IPTool.getIP(event.player))).country.isoCode
         countryBlocker.config.getStringList("CountryBlocker.blockList").forEach { country_code ->
             if (country == country_code) {
