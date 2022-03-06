@@ -1,0 +1,4 @@
+CountryBlocker:
+  deny_message: "&7Your country &e[connected_country] &7was blocked on this server !"
+  blockList:
+    - RU

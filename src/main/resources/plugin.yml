@@ -1,0 +1,11 @@
+main: ${group}.${name}
+name: ${name}
+prefix: ${name}
+version: ${version}
+author: EncryptSL
+website: http://www.encryptsl.cekuj.net
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.6.10
+  - com.maxmind.geoip2:geoip2:3.0.0
+
+description: ${description}
