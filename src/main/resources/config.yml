@@ -1,4 +1,5 @@
 CountryBlocker:
-  deny_message: "&7Your country &e[connected_country] &7was blocked on this server !"
+  announcement: "<hover:show_text:\"<blue>CountryBlocker: <white><user>\n<gray>IPAddress: <gold><ip>\n<dark_green>Country: <white><country>\n<gold>Time: <white><time>\"><gray>User <user> trying connect on this server from <country>"
+  deny_message: "<gray>Your country <yellow><connected_country> <gray>was blocked on this server !"
   blockList:
     - RU
