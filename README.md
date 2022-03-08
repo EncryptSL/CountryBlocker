@@ -15,7 +15,9 @@ Minecraft connection country blocker - simple plugin based on PaperMC, plugin ca
 
 Configuration: 
 announcement - Is for admins notification about connection from blocked country.
+
 deny_message - Is for denied connection notify for user on his screen.
+
 blockList - There you can block any country with ISO format code. 
 
 Permission:
