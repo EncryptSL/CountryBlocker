@@ -18,6 +18,9 @@ announcement - Is for admins notification about connection from blocked country.
 deny_message - Is for denied connection notify for user on his screen.
 blockList - There you can block any country with ISO format code. 
 
+Permission:
+broadcast announcement for admins: `country.blocker.announcement`
+
 List with iso codes: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
 
 ```yml
