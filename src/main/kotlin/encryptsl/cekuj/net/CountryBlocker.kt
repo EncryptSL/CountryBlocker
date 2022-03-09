@@ -1,5 +1,6 @@
 package encryptsl.cekuj.net
 
+import encryptsl.cekuj.net.commands.CountryCMD
 import encryptsl.cekuj.net.database.Database
 import encryptsl.cekuj.net.listeners.HandlerListeners
 import org.bukkit.plugin.java.JavaPlugin
@@ -17,6 +18,7 @@ class CountryBlocker : JavaPlugin() {
         slF4JLogger.info("Plugin is enabled !")
         database.init()
         handlerListeners.registerListeners()
+        getCommand("country")?.setExecutor(CountryCMD(this))
         slF4JLogger.info("Plugin enabled in time ${System.currentTimeMillis() - start} ms")
     }
 
