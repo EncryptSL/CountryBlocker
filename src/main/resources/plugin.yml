@@ -2,6 +2,7 @@ main: ${group}.${name}
 name: ${name}
 prefix: ${name}
 version: ${version}
+api-version: 1.18
 author: EncryptSL
 website: http://www.encryptsl.cekuj.net
 libraries:
