@@ -9,3 +9,39 @@ libraries:
   - com.maxmind.geoip2:geoip2:3.0.0
 
 description: ${description}
+
+commands:
+  country:
+    aliases: cl
+    description: This is a command from CountryBlocker
+
+permissions:
+  country.blocker.*:
+    description: All access for every permissions from plugin
+    default: op
+    children:
+      - country.blocker.command.*
+      - country.blocker.announcement
+  country.blocker.command.*:
+    description: All access for commands
+    default: op
+    children:
+      - country.blocker.command.help
+      - country.blocker.command.add
+      - country.blocker.command.remove
+      - country.blocker.command.list
+  country.blocker.command.help:
+    description: Give access to help command
+    default: op
+  country.blocker.command.add:
+    description: Give access to add command
+    default: op
+  country.blocker.command.remove:
+    description: Give access to remove command
+    default: op
+  country.blocker.command.list:
+    description: Give access to show blocked countries
+    default: op
+  country.blocker.announcement:
+    description: Give access to view broadcast announcement
+    default: op
