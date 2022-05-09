@@ -1,5 +1,5 @@
 plugins {
-    id("io.papermc.paperweight.userdev") version "1.3.5-LOCAL-SNAPSHOT"
+    id("io.papermc.paperweight.userdev") version "1.3.6"
     kotlin("jvm") version "1.6.10"
 }
 

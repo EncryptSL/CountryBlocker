@@ -16,15 +16,15 @@ class PlayerLoginEventClass(private val countryBlocker: CountryBlocker) : Listen
 
     @EventHandler(priority = EventPriority.HIGHEST)
     fun detectedCountry(event: PlayerLoginEvent) {
-        if (event.player.address == null || IPTool.getIP(event.player) == "127.0.0.1") return
-        val country = countryBlocker.database.getDatabase().country(InetAddress.getByName(IPTool.getIP(event.player))).country.isoCode
+        if (event.player.address == null || IPTool.getIP(event.address.hostAddress) == "127.0.0.1") return
+        val country = countryBlocker.database.getDatabase().country(InetAddress.getByName(IPTool.getIP(event.address.hostAddress))).country.isoCode
         countryBlocker.config.getStringList("CountryBlocker.blockList").forEach { country_code ->
             if (country == country_code) {
                 Bukkit.broadcast(MiniMessage.miniMessage().deserialize(
                     countryBlocker.config.getString("CountryBlocker.announcement").toString(),
                     TagResolver.resolver(
                         Placeholder.parsed("user", event.player.name),
-                        Placeholder.parsed("ip", IPTool.getIP(event.player)),
+                        Placeholder.parsed("ip", IPTool.getIP(event.address.hostAddress)),
                         Placeholder.parsed("country", country),
                         Placeholder.parsed("time", IPTool.getTime())
                     )
