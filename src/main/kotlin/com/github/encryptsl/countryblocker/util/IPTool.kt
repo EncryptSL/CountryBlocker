@@ -1,4 +1,4 @@
-package encryptsl.cekuj.net.util
+package com.github.encryptsl.countryblocker.util
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

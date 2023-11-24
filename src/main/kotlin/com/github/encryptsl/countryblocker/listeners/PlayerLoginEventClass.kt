@@ -1,7 +1,7 @@
-package encryptsl.cekuj.net.listeners
+package com.github.encryptsl.countryblocker.listeners
 
-import encryptsl.cekuj.net.CountryBlocker
-import encryptsl.cekuj.net.util.IPTool
+import com.github.encryptsl.countryblocker.CountryBlocker
+import com.github.encryptsl.countryblocker.util.IPTool
 import net.kyori.adventure.text.minimessage.MiniMessage
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver
@@ -18,8 +18,8 @@ class PlayerLoginEventClass(private val countryBlocker: CountryBlocker) : Listen
     fun detectedCountry(event: PlayerLoginEvent) {
         if (event.player.address == null || IPTool.getIP(event.address.hostAddress) == "127.0.0.1") return
         val country = countryBlocker.database.getDatabase().country(InetAddress.getByName(IPTool.getIP(event.address.hostAddress))).country.isoCode
-        countryBlocker.config.getStringList("CountryBlocker.blockList").forEach { country_code ->
-            if (country == country_code) {
+        countryBlocker.config.getStringList("CountryBlocker.blockList").forEach { isoCode ->
+            if (country == isoCode) {
                 Bukkit.broadcast(MiniMessage.miniMessage().deserialize(
                     countryBlocker.config.getString("CountryBlocker.announcement").toString(),
                     TagResolver.resolver(

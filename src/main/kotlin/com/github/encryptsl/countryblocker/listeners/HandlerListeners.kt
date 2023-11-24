@@ -1,13 +1,13 @@
-package encryptsl.cekuj.net.listeners
+package com.github.encryptsl.countryblocker.listeners
 
-import encryptsl.cekuj.net.CountryBlocker
+import com.github.encryptsl.countryblocker.CountryBlocker
 import org.bukkit.event.Listener
 
 class HandlerListeners(private val countryBlocker: CountryBlocker) {
 
     fun registerListeners() {
         val start = System.currentTimeMillis()
-        val list: List<Listener> = arrayListOf(PlayerLoginEventClass(countryBlocker))
+        val list = arrayListOf<Listener>(PlayerLoginEventClass(countryBlocker))
         list.forEach { s ->
             countryBlocker.server.pluginManager.registerEvents(s, countryBlocker)
             countryBlocker.slF4JLogger.info("Bukkit listeners ${s.javaClass.simpleName} registered () -> ok")

@@ -1,8 +1,8 @@
-package encryptsl.cekuj.net
+package com.github.encryptsl.countryblocker
 
-import encryptsl.cekuj.net.commands.CountryCMD
-import encryptsl.cekuj.net.database.Database
-import encryptsl.cekuj.net.listeners.HandlerListeners
+import com.github.encryptsl.countryblocker.commands.CountryCMD
+import com.github.encryptsl.countryblocker.database.Database
+import com.github.encryptsl.countryblocker.listeners.HandlerListeners
 import org.bukkit.plugin.java.JavaPlugin
 
 class CountryBlocker : JavaPlugin() {

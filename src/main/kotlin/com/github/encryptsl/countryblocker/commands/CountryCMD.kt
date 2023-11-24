@@ -1,6 +1,6 @@
-package encryptsl.cekuj.net.commands
+package com.github.encryptsl.countryblocker.commands
 
-import encryptsl.cekuj.net.CountryBlocker
+import com.github.encryptsl.countryblocker.CountryBlocker
 import net.kyori.adventure.text.minimessage.MiniMessage
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver

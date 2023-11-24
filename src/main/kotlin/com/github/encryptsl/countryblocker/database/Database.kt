@@ -1,7 +1,7 @@
-package encryptsl.cekuj.net.database
+package com.github.encryptsl.countryblocker.database
 
 import com.maxmind.geoip2.DatabaseReader
-import encryptsl.cekuj.net.CountryBlocker
+import com.github.encryptsl.countryblocker.CountryBlocker
 import java.io.File
 
 class Database(private val countryBlocker: CountryBlocker) {
